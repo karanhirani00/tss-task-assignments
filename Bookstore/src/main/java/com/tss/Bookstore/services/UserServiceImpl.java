@@ -1,14 +1,14 @@
 package com.tss.Bookstore.services;
 
-import com.tss.Bookstore.dto.PagedResponse;
-import com.tss.Bookstore.dto.UserCreateRequestDto;
-import com.tss.Bookstore.dto.UserResponseDto;
-import com.tss.Bookstore.dto.UserUpdateRequestDto;
+import com.tss.Bookstore.dto.response.PagedResponse;
+import com.tss.Bookstore.dto.request.UserCreateRequestDto;
+import com.tss.Bookstore.dto.response.UserResponseDto;
+import com.tss.Bookstore.dto.request.UserUpdateRequestDto;
 import com.tss.Bookstore.entity.User;
 import com.tss.Bookstore.exception.DuplicateResourceException;
 import com.tss.Bookstore.exception.ResourceNotFoundException;
 import com.tss.Bookstore.mapper.UserMapper;
-import com.tss.Bookstore.repository.userRepository;
+import com.tss.Bookstore.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl  implements UserService{
-    private  final  userRepository userRepository;
+    private  final UserRepository userRepository;
     private  final UserMapper userMapper;
 
 

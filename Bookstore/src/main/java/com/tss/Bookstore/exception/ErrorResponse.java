@@ -14,5 +14,5 @@ public class ErrorResponse {
     private String error;
     private String message;
     private String path;
-    private Map<String, String> fieldErrors; // null unless it's a validation error
+    private Map<String, String> fieldErrors;
 }

@@ -1,6 +1,4 @@
-package com.tss.Bookstore.dto;
-
-
+package com.tss.Bookstore.dto.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -11,7 +9,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserUpdateRequestDto {
+public class UserCreateRequestDto {
 
     @NotBlank(message = "Name is required")
     @Size(max = 100, message = "Name must not exceed 100 characters")
@@ -21,6 +19,7 @@ public class UserUpdateRequestDto {
     @Email(message = "Email must be a valid email address")
     private String email;
 
+    @NotBlank(message = "Password is required")
     @Size(min = 8, message = "Password must be at least 8 characters")
-    private String password; // optional - null means "don't change password"
+    private String password;
 }

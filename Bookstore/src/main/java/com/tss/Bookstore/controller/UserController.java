@@ -1,9 +1,9 @@
 package com.tss.Bookstore.controller;
 
-import com.tss.Bookstore.dto.PagedResponse;
-import com.tss.Bookstore.dto.UserCreateRequestDto;
-import com.tss.Bookstore.dto.UserResponseDto;
-import com.tss.Bookstore.dto.UserUpdateRequestDto;
+import com.tss.Bookstore.dto.response.PagedResponse;
+import com.tss.Bookstore.dto.request.UserCreateRequestDto;
+import com.tss.Bookstore.dto.response.UserResponseDto;
+import com.tss.Bookstore.dto.request.UserUpdateRequestDto;
 import com.tss.Bookstore.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

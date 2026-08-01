@@ -1,10 +1,13 @@
 package com.tss.Bookstore.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+
+import java.time.LocalDate;
 
 
 @Entity
@@ -22,6 +25,8 @@ public class UserProfile {
     private String address;
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id" , nullable = false , unique = true)
+    @JsonIgnore
     private User user;
 
+    private LocalDate dob;
 }

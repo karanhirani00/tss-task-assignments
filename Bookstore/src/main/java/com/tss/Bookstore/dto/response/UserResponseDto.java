@@ -1,4 +1,4 @@
-package com.tss.Bookstore.dto;
+package com.tss.Bookstore.dto.response;
 
 
 import lombok.AllArgsConstructor;
