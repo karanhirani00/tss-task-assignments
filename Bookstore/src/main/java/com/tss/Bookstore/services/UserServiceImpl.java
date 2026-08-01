@@ -53,7 +53,7 @@ public class UserServiceImpl  implements UserService{
     @Override
     public UserResponseDto update(Long id, UserUpdateRequestDto request) {
         User user = userRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("id was not found"));
-        if (userRepository.existsByEmail(request.getEmail()) || !(user.getEmail().equals(request.getEmail()))) {
+        if (userRepository.existsByEmail(request.getEmail()) && !(user.getEmail().equals(request.getEmail()))) {
             throw new DuplicateResourceException("Email already registered: " + request.getEmail());
         }
 
