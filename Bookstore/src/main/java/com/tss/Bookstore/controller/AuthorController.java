@@ -31,7 +31,7 @@ public class AuthorController {
 
     @GetMapping
     public ResponseEntity<PagedResponse<AuthorResponseDto>> getAll(
-            @PageableDefault(size = 10, sort = "id") Pageable pageable) {
+            @PageableDefault(size = 10) Pageable pageable) {
         return ResponseEntity.ok(authorService.getAll(pageable));
     }
 
