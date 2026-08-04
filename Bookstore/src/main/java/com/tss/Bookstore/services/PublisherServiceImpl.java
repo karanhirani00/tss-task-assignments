@@ -8,6 +8,8 @@ import com.tss.Bookstore.exception.ResourceNotFoundException;
 import com.tss.Bookstore.mapper.PublisherMapper;
 import com.tss.Bookstore.repository.PublisherRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -19,11 +21,14 @@ public class PublisherServiceImpl implements PublisherService {
 
     private final PublisherRepository publisherRepository;
     private final PublisherMapper publisherMapper;
+    private static  final Logger logger = LoggerFactory.getLogger(PublisherServiceImpl.class);
+
 
     @Override
     public PublisherResponseDto create(PublisherRequestDto request) {
         Publisher publisher = new Publisher();
         publisher.setName(request.getName());
+        logger.info("Successfully created publisher with ID {}" ,  publisher.getId());
         return publisherMapper.toDto(publisherRepository.save(publisher));
     }
 
@@ -36,6 +41,7 @@ public class PublisherServiceImpl implements PublisherService {
     @Override
     public PagedResponse<PublisherResponseDto> getAll(Pageable pageable) {
         Page<PublisherResponseDto> page = publisherRepository.findAll(pageable).map(publisherMapper::toDto);
+        logger.info("Successfully retrieved publishers");
         return PagedResponse.from(page);
     }
 
@@ -45,6 +51,7 @@ public class PublisherServiceImpl implements PublisherService {
         Publisher publisher = publisherRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Publisher not found with id: " + id));
         publisher.setName(request.getName());
+        logger.info("Successfully updated publisher with ID: {}", publisher.getId());
         return publisherMapper.toDto(publisherRepository.save(publisher));
     }
 
@@ -54,6 +61,7 @@ public class PublisherServiceImpl implements PublisherService {
                 .orElseThrow(() -> new ResourceNotFoundException("Publisher not found with id: " + id));
         publisher.setIsDeleted(true);
         publisherRepository.save(publisher);
+        logger.info("Successfully soft-deleted publisher with ID: {}", id);
     }
 
 

@@ -15,3 +15,4 @@ public class PublisherRequestDto {
     @Size(max = 150, message = "Name must not exceed 150 characters")
     private String name;
 }
+

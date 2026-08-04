@@ -58,7 +58,6 @@ public class Book {
     )
     private Set<Author> authors = new HashSet<>();
 
-
     @OneToMany(mappedBy = "book")
     private List<OrderItem> orderItems = new ArrayList<>();
 

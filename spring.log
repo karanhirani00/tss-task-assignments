@@ -1,0 +1,332 @@
+2026-08-04T16:51:00.264+05:30  INFO 15884 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Starting BookstoreApplication using Java 18.0.2.1 with PID 15884 (C:\SPRING_PROJECT\Bookstore\Bookstore\target\classes started by Karan.Hirani in C:\SPRING_PROJECT\Bookstore)
+2026-08-04T16:51:00.267+05:30  INFO 15884 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-04T16:51:00.911+05:30  INFO 15884 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04T16:51:00.986+05:30  INFO 15884 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 7 JPA repository interfaces.
+2026-08-04T16:51:01.624+05:30  INFO 15884 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-04T16:51:01.636+05:30  INFO 15884 --- [Bookstore] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-04T16:51:01.637+05:30  INFO 15884 --- [Bookstore] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-04T16:51:01.707+05:30  INFO 15884 --- [Bookstore] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1396 ms
+2026-08-04T16:51:01.874+05:30  INFO 15884 --- [Bookstore] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-04T16:51:01.940+05:30  INFO 15884 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-04T16:51:02.382+05:30  INFO 15884 --- [Bookstore] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04T16:51:02.424+05:30  INFO 15884 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-04T16:51:02.904+05:30  INFO 15884 --- [Bookstore] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6654ca0d
+2026-08-04T16:51:02.905+05:30  INFO 15884 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-04T16:51:02.977+05:30  INFO 15884 --- [Bookstore] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/Bookstore]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: Bookstore/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04T16:51:04.161+05:30  INFO 15884 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04T16:51:04.252+05:30  INFO 15884 --- [Bookstore] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T16:51:04.326+05:30  INFO 15884 --- [Bookstore] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-04T16:51:05.373+05:30  WARN 15884 --- [Bookstore] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-04T16:51:05.704+05:30  INFO 15884 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-04T16:51:05.709+05:30  INFO 15884 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Started BookstoreApplication in 6.074 seconds (process running for 6.588)
+2026-08-04T16:51:29.262+05:30  INFO 15884 --- [Bookstore] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-04T16:51:29.262+05:30  INFO 15884 --- [Bookstore] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-04T16:51:29.262+05:30  INFO 15884 --- [Bookstore] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-04T16:54:34.847+05:30  INFO 15884 --- [Bookstore] [http-nio-8080-exec-8] c.t.B.services.UserProfileServiceImpl    : saved user
+2026-08-04T17:11:20.147+05:30  INFO 15884 --- [Bookstore] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-04T17:11:20.335+05:30  INFO 15884 --- [Bookstore] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-04T17:11:20.349+05:30  INFO 15884 --- [Bookstore] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T17:11:20.375+05:30  INFO 15884 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-04T17:11:20.386+05:30  INFO 15884 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-04T17:11:27.014+05:30  INFO 4376 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Starting BookstoreApplication using Java 18.0.2.1 with PID 4376 (C:\SPRING_PROJECT\Bookstore\Bookstore\target\classes started by Karan.Hirani in C:\SPRING_PROJECT\Bookstore)
+2026-08-04T17:11:27.018+05:30  INFO 4376 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-04T17:11:27.729+05:30  INFO 4376 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04T17:11:27.868+05:30  INFO 4376 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 7 JPA repository interfaces.
+2026-08-04T17:11:28.658+05:30  INFO 4376 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-04T17:11:28.799+05:30  INFO 4376 --- [Bookstore] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-04T17:11:28.799+05:30  INFO 4376 --- [Bookstore] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-04T17:11:29.021+05:30  INFO 4376 --- [Bookstore] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1949 ms
+2026-08-04T17:11:29.420+05:30  INFO 4376 --- [Bookstore] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-04T17:11:29.490+05:30  INFO 4376 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-04T17:11:30.475+05:30  INFO 4376 --- [Bookstore] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04T17:11:30.598+05:30  INFO 4376 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-04T17:11:31.402+05:30  INFO 4376 --- [Bookstore] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@49e0b123
+2026-08-04T17:11:31.409+05:30  INFO 4376 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-04T17:11:31.608+05:30  INFO 4376 --- [Bookstore] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/Bookstore]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: Bookstore/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04T17:11:35.325+05:30  INFO 4376 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04T17:11:35.555+05:30  INFO 4376 --- [Bookstore] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T17:11:35.738+05:30  INFO 4376 --- [Bookstore] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-04T17:11:38.255+05:30  WARN 4376 --- [Bookstore] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-04T17:11:39.160+05:30  INFO 4376 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-04T17:11:39.165+05:30  INFO 4376 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Started BookstoreApplication in 12.714 seconds (process running for 13.402)
+2026-08-04T17:11:44.161+05:30  INFO 4376 --- [Bookstore] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-04T17:11:44.161+05:30  INFO 4376 --- [Bookstore] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-04T17:11:44.166+05:30  INFO 4376 --- [Bookstore] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-08-04T17:11:45.077+05:30  WARN 4376 --- [Bookstore] [http-nio-8080-exec-5] c.t.B.exception.GlobalExceptionHandler   : Duplicate resource conflict at [/api/users/6/profile]: Profile already exists for user id: 6
+2026-08-04T17:12:10.402+05:30 ERROR 4376 --- [Bookstore] [http-nio-8080-exec-3] c.t.B.exception.GlobalExceptionHandler   : Unhandled exception occurred at [/api/users/65161sas/profile]: 
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'userId': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "65161sas"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:295) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:134) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "65161sas"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:204) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:434) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:407) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:158) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:75) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:51) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:844) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:287) ~[spring-web-7.0.8.jar:7.0.8]
+	... 43 common frames omitted
+
+2026-08-04T17:12:48.364+05:30  WARN 4376 --- [Bookstore] [http-nio-8080-exec-2] c.t.B.exception.GlobalExceptionHandler   : Duplicate resource conflict at [/api/users/6/profile]: Profile already exists for user id: 6
+2026-08-04T17:15:07.063+05:30  INFO 4376 --- [Bookstore] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-04T17:15:07.236+05:30  INFO 4376 --- [Bookstore] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-04T17:15:07.239+05:30  INFO 4376 --- [Bookstore] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T17:15:07.241+05:30  INFO 4376 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-04T17:15:07.244+05:30  INFO 4376 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-04T17:15:11.473+05:30  INFO 19544 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Starting BookstoreApplication using Java 18.0.2.1 with PID 19544 (C:\SPRING_PROJECT\Bookstore\Bookstore\target\classes started by Karan.Hirani in C:\SPRING_PROJECT\Bookstore)
+2026-08-04T17:15:11.477+05:30  INFO 19544 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-04T17:15:12.128+05:30  INFO 19544 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04T17:15:12.193+05:30  INFO 19544 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 7 JPA repository interfaces.
+2026-08-04T17:15:12.572+05:30  INFO 19544 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-04T17:15:12.584+05:30  INFO 19544 --- [Bookstore] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-04T17:15:12.584+05:30  INFO 19544 --- [Bookstore] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-04T17:15:12.634+05:30  INFO 19544 --- [Bookstore] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1108 ms
+2026-08-04T17:15:12.765+05:30  INFO 19544 --- [Bookstore] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-04T17:15:12.817+05:30  INFO 19544 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-04T17:15:13.241+05:30  INFO 19544 --- [Bookstore] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04T17:15:13.268+05:30  INFO 19544 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-04T17:15:13.739+05:30  INFO 19544 --- [Bookstore] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@49e0b123
+2026-08-04T17:15:13.741+05:30  INFO 19544 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-04T17:15:13.796+05:30  INFO 19544 --- [Bookstore] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/Bookstore]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: Bookstore/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04T17:15:14.829+05:30  INFO 19544 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04T17:15:14.900+05:30  INFO 19544 --- [Bookstore] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T17:15:14.990+05:30  INFO 19544 --- [Bookstore] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-04T17:15:16.026+05:30  WARN 19544 --- [Bookstore] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-04T17:15:16.311+05:30  INFO 19544 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-04T17:15:16.317+05:30  INFO 19544 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Started BookstoreApplication in 5.261 seconds (process running for 5.698)
+2026-08-04T17:15:21.761+05:30  INFO 19544 --- [Bookstore] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-04T17:15:21.763+05:30  INFO 19544 --- [Bookstore] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-04T17:15:21.765+05:30  INFO 19544 --- [Bookstore] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-04T17:15:22.759+05:30  WARN 19544 --- [Bookstore] [http-nio-8080-exec-2] c.t.B.exception.GlobalExceptionHandler   : Duplicate resource conflict at [/api/users/6/profile]
+2026-08-04T17:15:36.207+05:30 ERROR 19544 --- [Bookstore] [http-nio-8080-exec-7] c.t.B.exception.GlobalExceptionHandler   : Unhandled exception occurred at [/api/users/6sdd/profile]: 
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'userId': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "6sdd"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:295) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:134) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "6sdd"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:204) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:434) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:407) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:158) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:75) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:51) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:844) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:287) ~[spring-web-7.0.8.jar:7.0.8]
+	... 43 common frames omitted
+
+2026-08-04T17:16:18.442+05:30  INFO 19544 --- [Bookstore] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-04T17:16:18.612+05:30  INFO 19544 --- [Bookstore] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-04T17:16:18.621+05:30  INFO 19544 --- [Bookstore] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T17:16:18.623+05:30  INFO 19544 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-04T17:16:18.626+05:30  INFO 19544 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-04T17:16:23.116+05:30  INFO 2400 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Starting BookstoreApplication using Java 18.0.2.1 with PID 2400 (C:\SPRING_PROJECT\Bookstore\Bookstore\target\classes started by Karan.Hirani in C:\SPRING_PROJECT\Bookstore)
+2026-08-04T17:16:23.119+05:30  INFO 2400 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-04T17:16:23.719+05:30  INFO 2400 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04T17:16:23.785+05:30  INFO 2400 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 7 JPA repository interfaces.
+2026-08-04T17:16:24.246+05:30  INFO 2400 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-04T17:16:24.258+05:30  INFO 2400 --- [Bookstore] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-04T17:16:24.258+05:30  INFO 2400 --- [Bookstore] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-04T17:16:24.322+05:30  INFO 2400 --- [Bookstore] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1160 ms
+2026-08-04T17:16:24.464+05:30  INFO 2400 --- [Bookstore] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-04T17:16:24.508+05:30  INFO 2400 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-04T17:16:24.866+05:30  INFO 2400 --- [Bookstore] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04T17:16:24.892+05:30  INFO 2400 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-04T17:16:25.376+05:30  INFO 2400 --- [Bookstore] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b360972
+2026-08-04T17:16:25.377+05:30  INFO 2400 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-04T17:16:25.433+05:30  INFO 2400 --- [Bookstore] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/Bookstore]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: Bookstore/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04T17:16:26.556+05:30  INFO 2400 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04T17:16:26.654+05:30  INFO 2400 --- [Bookstore] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T17:16:26.707+05:30  INFO 2400 --- [Bookstore] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-04T17:16:27.676+05:30  WARN 2400 --- [Bookstore] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-04T17:16:27.972+05:30  INFO 2400 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-04T17:16:27.981+05:30  INFO 2400 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Started BookstoreApplication in 5.337 seconds (process running for 5.777)
+2026-08-04T17:16:32.691+05:30  INFO 2400 --- [Bookstore] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-04T17:16:32.691+05:30  INFO 2400 --- [Bookstore] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-04T17:16:32.697+05:30  INFO 2400 --- [Bookstore] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-04T17:16:32.790+05:30 ERROR 2400 --- [Bookstore] [http-nio-8080-exec-1] c.t.B.exception.GlobalExceptionHandler   : Unhandled exception occurred at [/api/users/6sdd/profile]: 
+2026-08-04T17:16:36.469+05:30 ERROR 2400 --- [Bookstore] [http-nio-8080-exec-4] c.t.B.exception.GlobalExceptionHandler   : Unhandled exception occurred at [/api/users/6sdd/profile]: 
+2026-08-04T17:45:50.309+05:30  WARN 2400 --- [Bookstore] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m24s554ms747µs600ns).
+2026-08-04T18:19:23.264+05:30  INFO 2400 --- [Bookstore] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-04T18:19:23.479+05:30  INFO 2400 --- [Bookstore] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-04T18:19:23.501+05:30  INFO 2400 --- [Bookstore] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T18:19:23.525+05:30  INFO 2400 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-04T18:19:23.537+05:30  INFO 2400 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-04T18:19:29.293+05:30  INFO 15300 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Starting BookstoreApplication using Java 18.0.2.1 with PID 15300 (C:\SPRING_PROJECT\Bookstore\Bookstore\target\classes started by Karan.Hirani in C:\SPRING_PROJECT\Bookstore)
+2026-08-04T18:19:29.296+05:30  INFO 15300 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-04T18:19:29.877+05:30  INFO 15300 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04T18:19:29.963+05:30  INFO 15300 --- [Bookstore] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 7 JPA repository interfaces.
+2026-08-04T18:19:30.436+05:30  INFO 15300 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-04T18:19:30.450+05:30  INFO 15300 --- [Bookstore] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-04T18:19:30.451+05:30  INFO 15300 --- [Bookstore] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-04T18:19:30.516+05:30  INFO 15300 --- [Bookstore] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1178 ms
+2026-08-04T18:19:30.685+05:30  INFO 15300 --- [Bookstore] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-04T18:19:30.748+05:30  INFO 15300 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-04T18:19:31.173+05:30  INFO 15300 --- [Bookstore] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04T18:19:31.204+05:30  INFO 15300 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-04T18:19:31.700+05:30  INFO 15300 --- [Bookstore] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@49e0b123
+2026-08-04T18:19:31.702+05:30  INFO 15300 --- [Bookstore] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-04T18:19:31.774+05:30  INFO 15300 --- [Bookstore] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/Bookstore]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: Bookstore/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04T18:19:32.928+05:30  INFO 15300 --- [Bookstore] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04T18:19:33.015+05:30  INFO 15300 --- [Bookstore] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T18:19:33.100+05:30  INFO 15300 --- [Bookstore] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-04T18:19:34.126+05:30  WARN 15300 --- [Bookstore] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-04T18:19:34.437+05:30  INFO 15300 --- [Bookstore] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-04T18:19:34.442+05:30  INFO 15300 --- [Bookstore] [main] com.tss.Bookstore.BookstoreApplication   : Started BookstoreApplication in 5.65 seconds (process running for 6.227)
+2026-08-04T18:19:45.338+05:30  INFO 15300 --- [Bookstore] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-04T18:19:45.339+05:30  INFO 15300 --- [Bookstore] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-04T18:19:45.339+05:30  INFO 15300 --- [Bookstore] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-04T18:19:45.857+05:30  INFO 15300 --- [Bookstore] [http-nio-8080-exec-2] c.t.Bookstore.services.UserServiceImpl   : Successfully fetched user with ID: 4
+2026-08-04T18:20:59.005+05:30  INFO 15300 --- [Bookstore] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-04T18:20:59.176+05:30  INFO 15300 --- [Bookstore] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-04T18:20:59.176+05:30  INFO 15300 --- [Bookstore] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04T18:20:59.191+05:30  INFO 15300 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-04T18:20:59.191+05:30  INFO 15300 --- [Bookstore] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

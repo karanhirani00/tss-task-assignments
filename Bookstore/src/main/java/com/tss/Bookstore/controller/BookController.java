@@ -13,8 +13,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+
 @RestController
-@RequestMapping("/api/books")
+    @RequestMapping("/api/books")
 @RequiredArgsConstructor
 public class BookController {
 
@@ -36,4 +38,19 @@ public class BookController {
             @PageableDefault(size = 10, sort = "id") Pageable pageable) {
         return ResponseEntity.ok(bookService.getAll(pageable));
     }
+
+    @GetMapping("/search")
+    public ResponseEntity<PagedResponse<BookResponseDto>> search(
+            @RequestParam(required = false) String title,
+            @RequestParam(required = false) Long categoryId,
+            @RequestParam(required = false) Long authorId,
+            @RequestParam(required = false) BigDecimal minPrice,
+            @RequestParam(required = false) BigDecimal maxPrice,
+            @RequestParam(required = false) Boolean inStock,
+            @PageableDefault(size = 10, sort = "id") Pageable pageable) {
+
+        return ResponseEntity.ok(bookService.search(title, categoryId, authorId, minPrice, maxPrice, inStock, pageable));
+    }
+
+
 }

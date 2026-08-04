@@ -15,10 +15,13 @@ import com.tss.Bookstore.repository.BookRepository;
 import com.tss.Bookstore.repository.CategoryRepository;
 import com.tss.Bookstore.repository.PublisherRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,7 +34,7 @@ public class BookServiceImpl implements BookService {
     private final CategoryRepository categoryRepository;
     private final AuthorRepository authorRepository;
     private final BookMapper bookMapper;
-
+    private static final Logger logger = LoggerFactory.getLogger(BookServiceImpl.class);
     @Override
     public BookResponseDto create(BookRequestDto request) {
 
@@ -62,6 +65,7 @@ public class BookServiceImpl implements BookService {
         book.setAuthors(authors);
 
         Book saved = bookRepository.save(book);
+        logger.info("Successfully created book with ID: {}",saved.getId());
         return bookMapper.toDto(saved);
     }
 
@@ -69,6 +73,7 @@ public class BookServiceImpl implements BookService {
     public BookResponseDto getById(Long id) {
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found with id: " + id));
+        logger.info("Successfully fetched book with ID: {}", id);
         return bookMapper.toDto(book);
     }
 
@@ -76,6 +81,24 @@ public class BookServiceImpl implements BookService {
     public PagedResponse<BookResponseDto> getAll(Pageable pageable) {
         Page<BookResponseDto> page = bookRepository.findAll(pageable)
                 .map(bookMapper::toDto);
+        logger.info("Successfully retrieved books page {}", page.getNumber());
+        return PagedResponse.from(page);
+    }
+
+    @Override
+    public PagedResponse<BookResponseDto> search(
+            String title,
+            Long categoryId,
+            Long authorId,
+            BigDecimal minPrice,
+            BigDecimal maxPrice,
+            Boolean inStock,
+            Pageable pageable) {
+
+        Page<BookResponseDto> page = bookRepository.searchBooks(title, categoryId, authorId, minPrice, maxPrice, inStock, pageable)
+                .map(bookMapper::toDto);
+        logger.info("Successfully executed serch");
+
         return PagedResponse.from(page);
     }
 }

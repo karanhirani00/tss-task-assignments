@@ -10,6 +10,8 @@ import com.tss.Bookstore.exception.ResourceNotFoundException;
 import com.tss.Bookstore.mapper.UserMapper;
 import com.tss.Bookstore.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -19,10 +21,11 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl  implements UserService{
     private  final UserRepository userRepository;
     private  final UserMapper userMapper;
-
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Override
     public UserResponseDto create(UserCreateRequestDto request) {
+
 
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new DuplicateResourceException("Email already registered: " + request.getEmail());
@@ -34,19 +37,26 @@ public class UserServiceImpl  implements UserService{
         user.setPassword(request.getPassword());
 
         User saved = userRepository.save(user);
+        logger.info("Successfully created user with ID: {} and email: {}", saved.getId(), saved.getEmail());
+
         return userMapper.toDto(saved);
     }
 
     @Override
     public UserResponseDto getById(Long id) {
         User user = userRepository.findByIdAndIsDeletedFalse(id).orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id));
+        logger.info("Successfully fetched user with ID: {}", id);
         return userMapper.toDto(user);
+
     }
 
     @Override
     public PagedResponse<UserResponseDto> getAll(Pageable pageable) {
         Page<UserResponseDto> page = userRepository.findByIsDeletedFalse(pageable)
                 .map(userMapper::toDto);
+
+        logger.info("Successfully retrieved users");
+
         return PagedResponse.from(page);
     }
 
@@ -64,6 +74,7 @@ public class UserServiceImpl  implements UserService{
             user.setPassword(request.getPassword());
         }
         userRepository.save(user);
+        logger.info("Successfully updated user with ID");
         return  userMapper.toDto(user);
     }
 
@@ -79,5 +90,6 @@ public class UserServiceImpl  implements UserService{
 
         user.setIsDeleted(true);
         userRepository.save(user);
+        logger.info("Successfully soft-deleted user with ID: {}", id);
     }
 }
