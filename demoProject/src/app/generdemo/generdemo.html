@@ -1,0 +1,42 @@
+    
+<h1>start generdemo</h1>
+
+<p>generdemo works!</p>
+
+<h3>Movie Variables in Angular</h3>
+
+<p>Movie Id: {{ MovieId }}</p>
+<p>Movie Name: {{ MovieName }}</p>
+<p>Rating: {{ Rating }}</p>
+<p>Release Date: {{ ReleaseDate }}</p>
+<p>
+   sum: {{7+8}}
+</p>
+
+
+
+<p>{{getstrig()}}</p>
+<p>ternary oprater use : {{num%2 == 0 ? num : num*2 }}</p>
+
+<P>MOVE NAME :<span [innerText] = "MovieName"></span></P>
+enter a move rating : <input  [value] = "Rating"/>
+
+
+<br>
+<button (click) = "updnumber()">upate number</button>
+
+
+Enter Genre Desc : <input name="MovieName" [(ngModel)]="MovieName"/>
+
+<p>Value entered is : {{ MovieName }}</p>
+
+<div class="container mt-5">
+  <h1 class="text-primary">Bootstrap Installed Successfully!</h1>
+
+  <button class="btn btn-success">
+    Click Me
+  </button>
+</div>
+
+
+  

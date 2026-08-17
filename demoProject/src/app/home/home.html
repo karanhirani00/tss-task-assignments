@@ -1,0 +1,32 @@
+<p>home works!</p>
+<h1>Home Page</h1>
+<hr>
+
+
+
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+
+  <button
+    type="button"
+    class="btn"
+    [ngClass]="isadmin ? 'btn-success' : 'btn-outline-primary'"
+    (click)="switchRole('admin')">
+    Admin
+  </button>
+
+  <button
+    type="button"
+    class="btn"
+    [ngClass]="!isadmin ? 'btn-success' : 'btn-outline-primary'"
+    (click)="switchRole('member')">
+    Member
+  </button>
+
+</div>
+
+@if(isadmin){
+    <app-admin></app-admin>
+}
+@else{
+    <app-member></app-member>
+}
