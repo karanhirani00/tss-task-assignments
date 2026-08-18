@@ -16,8 +16,8 @@
    <td [ngStyle]="{'font-weight': m.movieId % 2 == 0 ? 'bold' : 'normal'}">
                             {{ m.movieId }}</td>
                 <td>{{ m.movieTitle }}</td>
-                <td>{{ m.movieRating }}</td>
-                <td>{{ m.releaseDate | date }}</td>
+                <td>{{ m.movieRating |movieType : m.genreId }}</td>
+                <td>{{ m.releaseDate | date :'shortTime'}}</td>
                 <td>{{ m.genreId }}</td>
             </tr>
         }@empty

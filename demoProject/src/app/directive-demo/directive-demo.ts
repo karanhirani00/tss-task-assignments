@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Movie } from '../../modules/Movie';
+import { MovieTypePipe } from '../pipes/movie-type-pipe';
 
 @Component({
   selector: 'app-directive-demo',
-  imports: [CommonModule],
+  imports: [CommonModule , MovieTypePipe],
   templateUrl: './directive-demo.html',
   styleUrl: './directive-demo.css',
 })
