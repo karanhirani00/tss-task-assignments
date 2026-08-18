@@ -19,6 +19,13 @@
                 <td>{{ m.movieRating |movieType : m.genreId }}</td>
                 <td>{{ m.releaseDate | date :'shortTime'}}</td>
                 <td>{{ m.genreId }}</td>
+                <td>
+                <button
+                    class="btn btn-primary"
+                    (click)="updMovieToChild(idx)">
+                    Display Details
+                </button>
+            </td>
             </tr>
         }@empty
         {
@@ -28,3 +35,10 @@
         }
     </tbody>
 </table>
+
+<hr>
+
+
+<app-movie-detail
+ [movieFromParent]="movieToChild">
+</app-movie-detail>
