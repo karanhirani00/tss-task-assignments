@@ -11,6 +11,11 @@ import { MovieDetail } from '../movie-detail/movie-detail';
   styleUrl: './directive-demo.css',
 })
 export class DirectiveDemo {
+   msgFromChild = "";
+
+  receiveData(message: string) {
+    this.msgFromChild = message;
+  }
 
     listMovie : Movie[] = [
     {movieId: 1, movieTitle: 'Movie 1', movieRating: 4.5, releaseDate: new Date('2022-01-01'), genreId: 1},

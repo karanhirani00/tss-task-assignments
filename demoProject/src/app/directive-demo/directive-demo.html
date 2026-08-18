@@ -38,7 +38,13 @@
 
 <hr>
 
+<h3>Data Received From Child</h3>
+
+{{msgFromChild}}
+<hr>
+
 
 <app-movie-detail
- [movieFromParent]="movieToChild">
+ [movieFromParent]="movieToChild"
+(dataToParent)="receiveData($event)">
 </app-movie-detail>

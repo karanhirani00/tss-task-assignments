@@ -1,5 +1,6 @@
-import { Component ,Input } from '@angular/core';
+import { Component ,Input, Output ,EventEmitter } from '@angular/core';
 import { Movie } from '../../modules/Movie';
+
 
 @Component({
   selector: 'app-movie-detail',
@@ -16,4 +17,12 @@ movieFromParent: Movie = {
   releaseDate: new Date(),
   genreId: 0
 };
+
+
+  @Output()
+   dataToParent = new EventEmitter<string>();
+
+  sendDataToParent() {
+    this.dataToParent.emit("Hello Parent from Child");
+  }
 }
