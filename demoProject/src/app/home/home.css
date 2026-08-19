@@ -1,0 +1,56 @@
+/* Page */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Heading */
+h2{
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Table */
+.user-table{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header */
+.user-table thead{
+    background-color: #0d6efd;
+    color: white;
+}
+
+.user-table th{
+    padding: 14px;
+    text-align: left;
+    font-size: 17px;
+}
+
+/* Body */
+.user-table td{
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternate Rows */
+.user-table tbody tr:nth-child(even){
+    background-color: #f8f9fa;
+}
+
+/* Hover Effect */
+.user-table tbody tr:hover{
+    background-color: #dbeafe;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Last Row */
+.user-table tbody tr:last-child td{
+    border-bottom: none;
+}

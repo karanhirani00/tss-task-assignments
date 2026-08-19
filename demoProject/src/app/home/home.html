@@ -34,26 +34,46 @@
 
 <h2>User List</h2>
 
-<table border="1">
+<h2>User List</h2>
 
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Username</th>
-      <th>Email</th>
-    </tr>
-  </thead>
+<table class="user-table">
 
-  <tbody>
-    @for(user of users; track user.id) {
-      <tr>
-        <td>{{ user.id }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.username }}</td>
-        <td>{{ user.email }}</td>
-      </tr>
-    }
-  </tbody>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @for(user of users; track user.id)
+        {
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.website}}</td>
+                <td>{{user.company.name}}</td>
+            </tr>
+        }
+
+        @empty
+        {
+            <tr>
+                <td colspan="7" class="no-data">
+                    No Users Found
+                </td>
+            </tr>
+        }
+
+    </tbody>
 
 </table>
