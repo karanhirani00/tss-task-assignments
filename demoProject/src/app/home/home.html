@@ -34,7 +34,9 @@
 
 <h2>User List</h2>
 
-<h2>User List</h2>
+
+
+@if (users$ | async; as users) {
 
 <table class="user-table">
 
@@ -52,21 +54,19 @@
 
     <tbody>
 
-        @for(user of users; track user.id)
-        {
+        @for (user of users; track user.id) {
             <tr>
-                <td>{{user.id}}</td>
-                <td>{{user.name}}</td>
-                <td>{{user.username}}</td>
-                <td>{{user.email}}</td>
-                <td>{{user.phone}}</td>
-                <td>{{user.website}}</td>
-                <td>{{user.company.name}}</td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.website }}</td>
+                <td>{{ user.company?.name }}</td>
             </tr>
         }
 
-        @empty
-        {
+        @empty {
             <tr>
                 <td colspan="7" class="no-data">
                     No Users Found
@@ -77,3 +77,13 @@
     </tbody>
 
 </table>
+
+} @else {
+
+<div class="text-center my-4">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+}

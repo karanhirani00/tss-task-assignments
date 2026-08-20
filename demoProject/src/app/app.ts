@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Generdemo } from './generdemo/generdemo';
 import { DirectiveDemo } from './directive-demo/directive-demo';
 import { Home } from './home/home';
+import { FromtemplateComponent } from './fromtemplate/fromtemplate';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet ,Generdemo,DirectiveDemo ,Home],
+  imports: [RouterOutlet ,Generdemo,DirectiveDemo ,Home ,FromtemplateComponent],
  templateUrl: './app.html',
 
  styleUrl: './app.css'

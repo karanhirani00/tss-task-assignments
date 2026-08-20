@@ -1,0 +1,144 @@
+<form #registerForm="ngForm" (ngSubmit)="register()">
+
+    <!-- Name -->
+
+    <div class="mb-3">
+
+        <label>Name</label>
+
+        <input
+
+        type="text"
+
+        class="form-control"
+
+        name="name"
+
+        #name="ngModel"
+
+        [(ngModel)]="userr.name"
+
+        required
+
+        maxlength="100">
+
+        @if(name.invalid && (name.touched || name.dirty))
+        {
+
+            @if(name.errors?.['required'])
+            {
+                <small class="text-danger">
+                    Name is required
+                </small>
+            }
+
+            @if(name.errors?.['maxlength'])
+            {
+                <small class="text-danger">
+                    Maximum 100 characters allowed
+                </small>
+            }
+
+        }
+
+    </div>
+
+    <!-- Email -->
+
+    <div class="mb-3">
+
+        <label>Email</label>
+
+        <input
+
+        type="email"
+
+        class="form-control"
+
+        name="email"
+
+        #email="ngModel"
+
+        [(ngModel)]="userr.email"
+
+        required
+
+        email>
+
+        @if(email.invalid && (email.touched || email.dirty))
+        {
+
+            @if(email.errors?.['required'])
+            {
+                <small class="text-danger">
+                    Email is required
+                </small>
+            }
+
+            @if(email.errors?.['email'])
+            {
+                <small class="text-danger">
+                    Invalid Email
+                </small>
+            }
+
+        }
+
+    </div>
+
+    <!-- Password -->
+
+    <div class="mb-3">
+
+        <label>Password</label>
+
+        <input
+
+        type="password"
+
+        class="form-control"
+
+        name="password"
+
+        #password="ngModel"
+
+        [(ngModel)]="userr.password"
+
+        required
+
+        minlength="8">
+
+        @if(password.invalid && (password.touched || password.dirty))
+        {
+
+            @if(password.errors?.['required'])
+            {
+                <small class="text-danger">
+                    Password is required
+                </small>
+            }
+
+            @if(password.errors?.['minlength'])
+            {
+                <small class="text-danger">
+                    Password must be at least 8 characters
+                </small>
+            }
+
+        }
+
+    </div>
+
+    <button
+
+    class="btn btn-primary"
+
+    [disabled]="registerForm.invalid"
+
+    type="submit">
+
+        Register
+
+    </button>
+
+</form>
