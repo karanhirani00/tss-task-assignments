@@ -4,13 +4,14 @@ import { Generdemo } from './generdemo/generdemo';
 import { DirectiveDemo } from './directive-demo/directive-demo';
 import { Home } from './home/home';
 import { FromtemplateComponent } from './fromtemplate/fromtemplate';
+import { ReviewComponent } from './review/review';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet ,Generdemo,DirectiveDemo ,Home ,FromtemplateComponent],
+  imports: [RouterOutlet ,Generdemo,DirectiveDemo ,Home ,FromtemplateComponent ,ReviewComponent],  
  templateUrl: './app.html',
-
- styleUrl: './app.css'
+styleUrl: './app.css'
 
 })
 export class App {

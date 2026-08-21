@@ -4,10 +4,11 @@ import { Admin } from '../admin/admin';
 import { Member } from '../member/member';
 import { Api } from '../services/api';
 import { Observable } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [NgClass , Admin ,Member , AsyncPipe],
+  imports: [NgClass , Admin ,Member , AsyncPipe , RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

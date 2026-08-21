@@ -1,0 +1,218 @@
+<!-- <form class="row g-3" [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+
+  <div class="col-md-6">
+    <label for="userId">User ID</label>
+    <input
+      id="userId"
+      type="number"
+      formControlName="userId">
+
+    <div *ngIf="reviewForm.get('userId')?.touched && reviewForm.get('userId')?.hasError('required')">
+      User ID is required.
+    </div>
+  </div>
+
+  <br>
+
+  <div class="col-md-6">
+    <label for="bookId">Book ID</label>
+    <input
+      id="bookId"
+      type="number"
+      formControlName="bookId">
+
+    <div *ngIf="reviewForm.get('bookId')?.touched && reviewForm.get('bookId')?.hasError('required')">
+      Book ID is required.
+    </div>
+  </div>
+
+  <br>
+
+  <div class="col-md-6">
+    <label for="rating">Rating</label>
+    <input
+      id="rating"
+      type="number"
+      min="1"
+      max="5"
+      formControlName="rating">
+
+    <div *ngIf="reviewForm.get('rating')?.touched">
+
+      <div *ngIf="reviewForm.get('rating')?.hasError('required')">
+        Rating is required.
+      </div>
+
+      <div *ngIf="reviewForm.get('rating')?.hasError('min')">
+        Rating must be at least 1.
+      </div>
+
+      <div *ngIf="reviewForm.get('rating')?.hasError('max')">
+        Rating must not exceed 5.
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+
+  <div class="col-md-6">
+    <label for="comment">Comment</label>
+
+    <textarea
+      id="comment"
+      rows="5"
+      cols="30"
+      formControlName="comment"></textarea>
+
+    <div *ngIf="reviewForm.get('comment')?.touched && reviewForm.get('comment')?.hasError('maxlength')">
+      Comment cannot exceed 2000 characters.
+    </div>
+  </div>
+
+  <br>
+
+  <button type="submit" class="btn btn-primary" [disabled]="reviewForm.invalid">
+    Submit Review
+  </button>
+
+</form> -->
+
+
+
+
+
+
+<form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+
+      <div class="col-md-8">
+
+        <div class="card shadow-lg border-0">
+
+          <div class="card-header bg-primary text-white text-center">
+            <h3>Add Book Review</h3>
+          </div>
+
+          <div class="card-body">
+
+            <!-- User ID -->
+            <div class="mb-3">
+              <label for="userId" class="form-label">User ID</label>
+              <input
+                type="number"
+                class="form-control"
+                id="userId"
+                formControlName="userId"
+                placeholder="Enter User ID">
+
+              <div class="text-danger mt-1"
+                   *ngIf="reviewForm.get('userId')?.touched && reviewForm.get('userId')?.hasError('required')">
+                User ID is required.
+              </div>
+            </div>
+
+            <!-- Book ID -->
+            <div class="mb-3">
+              <label for="bookId" class="form-label">Book ID</label>
+              <input
+                type="number"
+                class="form-control"
+                id="bookId"
+                formControlName="bookId"
+                placeholder="Enter Book ID">
+
+              <div class="text-danger mt-1"
+                   *ngIf="reviewForm.get('bookId')?.touched && reviewForm.get('bookId')?.hasError('required')">
+                Book ID is required.
+              </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="mb-3">
+              <label for="rating" class="form-label">Rating</label>
+
+              <select
+                class="form-select"
+                id="rating"
+                formControlName="rating">
+
+                <option value="">Select Rating</option>
+                <option value="1">1 ⭐</option>
+                <option value="2">2 ⭐⭐</option>
+                <option value="3">3 ⭐⭐⭐</option>
+                <option value="4">4 ⭐⭐⭐⭐</option>
+                <option value="5">5 ⭐⭐⭐⭐⭐</option>
+
+              </select>
+
+              <div class="text-danger mt-1"
+                   *ngIf="reviewForm.get('rating')?.touched && reviewForm.get('rating')?.hasError('required')">
+                Rating is required.
+              </div>
+
+              <div class="text-danger mt-1"
+                   *ngIf="reviewForm.get('rating')?.hasError('min')">
+                Rating must be at least 1.
+              </div>
+
+              <div class="text-danger mt-1"
+                   *ngIf="reviewForm.get('rating')?.hasError('max')">
+                Rating must not exceed 5.
+              </div>
+
+            </div>
+
+            <!-- Comment -->
+            <div class="mb-4">
+              <label for="comment" class="form-label">Comment</label>
+
+              <textarea
+                class="form-control"
+                id="comment"
+                rows="5"
+                formControlName="comment"
+                placeholder="Write your review here..."></textarea>
+
+              <div class="text-danger mt-1"
+                   *ngIf="reviewForm.get('comment')?.touched && reviewForm.get('comment')?.hasError('maxlength')">
+                Comment cannot exceed 2000 characters.
+              </div>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-grid gap-2">
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg"
+                [disabled]="reviewForm.invalid">
+
+                Submit Review
+
+              </button>
+
+              <button
+                type="reset"
+                class="btn btn-outline-secondary"
+                (click)="reviewForm.reset()">
+
+                Reset
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</form>
